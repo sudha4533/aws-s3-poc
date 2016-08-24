@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>AWS_S3Demo</display-name>
+  <welcome-file-list>
+    <welcome-file>imageUpload.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload</param-name> 
+    <param-value>
+         C:\BCJMay16\Development\ApacheTomcat8\webapps\data\
+     </param-value> 
+</context-param>
+  
+  <servlet>
+    <servlet-name>ImageUploadHandler</servlet-name>
+    <servlet-class>com.bootcamp.imagestorage.controller.ImageUploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImageUploadHandler</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+</web-app>
